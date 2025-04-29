@@ -11,3 +11,15 @@ class books():
         self.price = float(input("Enter the lsting price of the book:\n"))
         self.Books[self.title] = {'Author': self.author, 'Price':self.price}
         print(self.Books[self.title])
+    
+    def sell(self):
+        while (True):
+            self.title = input("What book do you want to sell?\n")
+            if self.title in self.Books:
+                del self.Books[self.title]
+                print (self.Books)
+                break
+            else:
+                print("\nYour book wasn't found, try again.")
+
+     
