@@ -16,10 +16,7 @@ class books():
         while (True):
             self.title = input("What book do you want to sell?\n")
             if self.title in self.Books:
-                del self.Books[self.title]
-                print (self.Books)
+                del self.Books[self.title]    
                 break
             else:
-                print("\nYour book wasn't found, try again.")
-
-     
+                print ("Your book wan't found. Try again")
