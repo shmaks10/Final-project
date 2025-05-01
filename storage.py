@@ -20,3 +20,8 @@ class books():
                 break
             else:
                 print ("Your book wan't found. Try again")
+    def showbook(self):
+        for x in self.Books:
+            print(x)
+            print(self.Books[x]['Author'])
+            print(self.Books[x]['Price'])
