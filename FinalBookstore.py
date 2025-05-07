@@ -1,7 +1,8 @@
 from storage import books
 b = books()
 while (True):
-    v = input ("1.Add a book \n2. Sell a book \n3. See books I have \n4.Save my books \n9.Qiut")
+    v = input ("1.Add a book \n2. Sell a book \n3. See books I have \n4.Save my books \n9.Qiut"
+    "5. Open an existing file")
     if v == "1":
         c = b.add()
     elif v == "2":
@@ -10,5 +11,7 @@ while (True):
         h = b.showbook()
     elif v == "4":
         m = b.savebook()
+    elif v == "5":
+        o = b.loadbook()
     elif v == "9":
         break

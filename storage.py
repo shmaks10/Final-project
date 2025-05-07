@@ -26,10 +26,18 @@ class books():
             print("\n",self.Books[x]['Author'])
             print("\n",self.Books[x]['Price'])
     def savebook(self):
-        filename = str(input("Enter the name of the file: "))
+        filename = input("Enter the name of the file:")
         try:
-            with open(filename, "x") as file:
+            with open(filename, "w") as file:
                 file.write(str(self.Books))
             print("Book saved successfully.")
         except:
             print("Error: File already exists.")
+    def loadbook(self):
+        file_look = input("\nEnter the name of the file you need:")
+        try:
+            with open(file_look, "r") as file_look:
+                for i in file_look:
+                    print(i)
+        except:
+            print ("File wasn't found")
