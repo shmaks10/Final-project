@@ -23,12 +23,10 @@ class books():
     def showbook(self):
         for x in self.Books:
             self.Books[x]['Price'] = str(self.Books[x]['Price'])
-            content1 = str(x +"\n" + self.Books[x]['Author'] + "\n" + self.Books[x]['Price'])
+            content1 = str("Title:" + x +"\n" + "Author:" + self.Books[x]['Author'] + "\n" + "Price:" + self.Books[x]['Price'] + "\n")
             print(content1)
-            #print("\n",x)
-            #print("\n",self.Books[x]['Author'])
-            #print("\n",self.Books[x]['Price'])
     def savebook(self):
+        content = ""
         filename = input("Enter the name of the file:")
         for x in self.Books:
             self.Books[x]['Price'] = str(self.Books[x]['Price'])
