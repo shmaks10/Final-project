@@ -30,7 +30,7 @@ class books():
         filename = input("Enter the name of the file:")
         for x in self.Books:
             self.Books[x]['Price'] = str(self.Books[x]['Price'])
-            content += str(x +"\n" + self.Books[x]['Author'] + "\n" + self.Books[x]['Price'])
+            content += str("Title:" + x +"\n" + "Author:" + self.Books[x]['Author'] + "\n" + "Price:" + self.Books[x]['Price'] + "\n")
         with open(filename, "w") as file:
             file.write(content)
         print("Book saved successfully.")
