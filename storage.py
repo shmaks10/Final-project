@@ -30,7 +30,7 @@ class books():
         filename = input("Enter the name of the file:")
         for x in self.Books:
             self.Books[x]['Price'] = str(self.Books[x]['Price'])
-            content += str("Title:" + x +"\n" + "Author:" + self.Books[x]['Author'] + "\n" + "Price:" + self.Books[x]['Price'] + "\n")
+            content += str(x + "," + self.Books[x]['Author'] + "," + self.Books[x]['Price'] + "\n")
         with open(filename, "w") as file:
             file.write(content)
         print("Book saved successfully.")
@@ -38,7 +38,9 @@ class books():
         file_look = input("\nEnter the name of the file you need:")
         try:
             with open(file_look, "r") as file_look:
-                for i in file_look:
-                    print(i)
+                for line in file_look:
+                    title, author, price = line.split (',')
+                    self.Books[title] = {'Author': author, 'Price': price}
+                print (self.Books)
         except:
             print ("File wasn't found")
